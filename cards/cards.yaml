@@ -1,0 +1,108 @@
+villager:
+  - name: "villager"
+  - role: "None"
+  - prompt: "You sleep soundly through the night."
+  - action: "villager_action"
+  - knowledge: "villager_knowledge"
+  - _team: "VILLAGER"
+  - turn_number: 0
+  - maximum: 3
+doppelganger:
+  - name: "doppelganger"
+  - role: "Choose a player. You are now that player's role, in addition to the player with that role card."
+  - prompt: "Chose a player whose role you want to assume."
+  - action: "doppelganger_action"
+  - knowledge: "doppelganger_knowledge"
+  - _team: "VILLAGER"
+  - turn_number: 1
+mason:
+  - name: "mason"
+  - role: "Look for and identify the other mason."
+  - prompt: "The other mason is {}"
+  - action: "villager_action"
+  - knowledge: "mason_knowledge"
+  - _team: "VILLAGER"
+  - turn_number: 4
+  - maximum: 2
+  - minimum: 2
+seer:
+  - name: "seer"
+  - role: "View {} or one other player's cards."
+  - prompt: "Choose card(s) to view."
+  - action: "seer_action"
+  - knowledge: "seer_knowledge"
+  - _team: "VILLAGER"
+  - turn_number: 5
+robber:
+  - name: "robber"
+  - role: "Swap roles with another player. You see your new role."
+  - prompt: 
+    - "Select a player with whom to swap roles."
+    - "You see you now have the role {}"
+  - action: "robber_action"
+  - knowledge: "robber_knowledge"
+  - _team: "VILLAGER"
+  - turn_number: 6
+troublemaker:
+  - name: "troublemaker"
+  - role: "Swap the roles of two other players."
+  - prompt: 
+    - "Select two player whose roles you want to swap."
+  - action: "troublemaker_action"
+  - knowledge: "villager_knowledge"
+  - _team: "VILLAGER"
+  - turn_number: 7
+drunk:
+  - name: "drunk"
+  - role: "Exchange your role for one in the center."
+  - prompt: 
+    - "Select a card from the center."
+  - action: "drunk_action"
+  - knowledge: "villager_knowledge"
+  - _team: "VILLAGER"
+  - turn_number: 8
+insomniac:
+  - name: "insomniac"
+  - role: "Wake up before dawn and view your current role."
+  - prompt: "You wake up and view your role."
+  - action: "villager_action"
+  - knowledge: "insomiac_knowledge"
+  - _team: "VILLAGER"
+  - turn_number: 9
+hunter:
+  - name: "hunter"
+  - role: "If you get the most votes, the person you vote for is also killed."
+  - prompt: "You sleep soundly through the night"
+  - action: "villager_action"
+  - knowledge: "villager_knowledge"
+  - _team: "VILLAGER"
+  - turn_number: 0
+tanner:
+  - name: "tanner"
+  - role: "If you get the most votes, you win."
+  - prompt: 
+    - "You sleep soundly through the night."
+  - action: "villager_action"
+  - knowledge: "villager_knowledge"
+  - _team: "TANNER"
+  - turn_number: 0
+werewolf:
+  - name: "werewolf"
+  - role: "You win if no werewolves are killed."
+  - prompt: 
+    - "{} reveal themselves as werewolves."
+  - action: "villager_action"
+  - knowledge: "werewolf_knowledge"
+  - _team: "WEREWOLF"
+  - turn_number: 2
+  - maximum: 2
+  - absolute_minimum: 1
+minion:
+  - name: "minion"
+  - role: "You win if no werewolves are killed."
+  - prompt: 
+    - "{} reveal themselves as werewolves."
+  - action: "villager_action"
+  - knowledge: "werewolf_knowledge"
+  - _team: "WEREWOLF"
+  - turn_number: 3
